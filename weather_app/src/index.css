@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', Arial !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: rgb(13,95,228);
+  background: linear-gradient(156deg, rgba(13,95,228,1) 0%, rgba(17,255,246,1) 100%); 
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
