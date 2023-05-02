@@ -1,11 +1,30 @@
-.search-container {
-  margin: 20px 30%;
+.body {
+  display: inline-flex;
+  overflow: hidden;
 }
 
-.current-weather {
-  padding: 0 10%;
+.weather-display {
+  height: 100vh;
+  width: 60vw;
+  display: flex;
 }
 
-.search-bar {
-  margin: 0 0;
+.sidebar {
+  height: 100vh;
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4.5px);
+  -webkit-backdrop-filter: blur(4.5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.searchbar {
+  margin: 2em auto 0 auto;
+  height: 10%;
+  width: 90%;
+  padding-left: 1em;
+  
 }

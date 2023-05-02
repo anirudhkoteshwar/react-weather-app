@@ -1,6 +1,8 @@
 import "./App.css";
 import Search from "./components/search/search";
 import CurrentWeather from "./components/current-weather/current-weather";
+import CurrentWeatherDetails from "./components/current-weather/current-weather-details";
+import Forecast from "./components/forecast-weather/forecast";
 import {
   WEATHER_API_URL,
   WEATHER_API_KEY,
@@ -10,17 +12,18 @@ import { useState } from "react";
 function App() {
   const [currentWeather, setCurrentWeather] = useState(null);
   const [forecast, setForecast] = useState(null);
+  //const [wallpaper, setWallpaper] = useState(`backgrounds/unknown.jpg`)
 
   const handleOnSearchChange = (searchData) => {
     //console.log(searchData);
     const [lat, lon] = searchData.value.split(" ");
 
     const currentWeatherFetch = fetch(
-      `${WEATHER_API_URL}/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}`
+      `${WEATHER_API_URL}/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`
     );
 
     const forecastWeatherFetch = fetch(
-      `${WEATHER_API_URL}/forecast?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}`
+      `${WEATHER_API_URL}/forecast?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`
     );
 
     Promise.all([currentWeatherFetch, forecastWeatherFetch])
@@ -36,14 +39,23 @@ function App() {
 
   console.log(currentWeather);
   console.log(forecast);
+  //setWallpaper(currentWeather.weather[0].icon);
+  //const body_element = document.querySelector('body');
+  //body_element.style.backgroundImage(`backgrounds/${wallpaper}.jpg`);
 
   return (
     <div className="body">
-      <div className="search-container">
-        <Search onSearchChange={handleOnSearchChange} />
+      <div className="weather-display">
+        {currentWeather && <CurrentWeather data={currentWeather} />}
       </div>
-      <div className="current-weather">
-        <CurrentWeather />
+      <div className="sidebar">
+        <div className="searchbar">
+          <Search onSearchChange={handleOnSearchChange} />
+        </div>
+          {currentWeather && <CurrentWeatherDetails data={currentWeather} />}
+        <div className="forecast-weather">
+          {forecast && <Forecast data={forecast} />}
+        </div>
       </div>
     </div>
   );
