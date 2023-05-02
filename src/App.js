@@ -12,10 +12,8 @@ import { useState } from "react";
 function App() {
   const [currentWeather, setCurrentWeather] = useState(null);
   const [forecast, setForecast] = useState(null);
-  //const [wallpaper, setWallpaper] = useState(`backgrounds/unknown.jpg`)
 
   const handleOnSearchChange = (searchData) => {
-    //console.log(searchData);
     const [lat, lon] = searchData.value.split(" ");
 
     const currentWeatherFetch = fetch(
@@ -39,9 +37,7 @@ function App() {
 
   console.log(currentWeather);
   console.log(forecast);
-  //setWallpaper(currentWeather.weather[0].icon);
-  //const body_element = document.querySelector('body');
-  //body_element.style.backgroundImage(`backgrounds/${wallpaper}.jpg`);
+  //document.body.style.backgroundImage=`url(../public/backgrounds/${currentWeather.weather[0].icon}.png)`;
 
   return (
     <div className="body">

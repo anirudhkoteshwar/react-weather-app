@@ -1,0 +1,8 @@
+.daily-item {
+    display: flex;
+    flex-direction: row;
+}
+
+.icon-small {
+    width: 80px;
+}

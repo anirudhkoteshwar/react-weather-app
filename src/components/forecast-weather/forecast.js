@@ -1,3 +1,5 @@
+import './forecast.css'
+
 const WEEK_DAYS = [
   "Monday",
   "Tuesday",
@@ -17,7 +19,6 @@ const Forecast = ({ data }) => {
   return (
     <>
       {data.list.slice(0, 4).map((item, idx) => (
-        <div className="other-forecast" key={idx}>
           <div className="daily-item">
             <img
               alt="weather"
@@ -27,7 +28,6 @@ const Forecast = ({ data }) => {
             <p className="min-max">{Math.round(item.main.temp_max)}°C / {Math.round(item.main.temp_min)}°C</p>
             <label className="day">{forecastDays[idx]}</label>
           </div>
-        </div>
       ))}
     </>
   );

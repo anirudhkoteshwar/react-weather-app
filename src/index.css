@@ -3,7 +3,7 @@ body {
   font-family: 'Roboto', Arial !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: rgba(17,176,255,1); 
+  background-color: blue;
   overflow: hidden;
 }
 
