@@ -1,7 +1,6 @@
 import "./current-weather.css";
 
 const CurrentWeather = ({ data }) => {
-    
   return (
     <div className="weather">
       <div className="top">
@@ -10,10 +9,13 @@ const CurrentWeather = ({ data }) => {
           <p className="weather-description">{data.weather[0].description}</p>
         </div>
         <p className="temperature">{Math.round(data.main.temp)}°C</p>
-        
       </div>
       <div className="bottom">
-      <img alt="weather" className="weather-icon" src={`icons/${data.weather[0].icon}.png`} />
+        <img
+          alt="weather"
+          className="weather-icon"
+          src={`icons/${data.weather[0].icon}.svg`}
+        />
       </div>
     </div>
   );

@@ -1,13 +1,14 @@
 .weather {
-  width: 35em;
+  width: 30em;
+  padding: 2em;
   color: #ffffff;
   margin: 27em 2em 2em 2em;
   padding: 0 0.5em 0.5em 1em;
-  background: rgba( 0, 0, 0, 0.45 );
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 11px );
-  -webkit-backdrop-filter: blur( 11px );
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  background: rgba(0, 0, 0, 0.45);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(11px);
+  -webkit-backdrop-filter: blur(11px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .top,
@@ -39,6 +40,8 @@
   margin-left: 0;
   margin-top: -0.5em;
   padding-left: 80%;
+  filter: invert(89%) sepia(100%) saturate(0%) hue-rotate(40deg)
+    brightness(105%) contrast(104%);
 }
 
 .temperature {

@@ -7,8 +7,8 @@ const Search = ({ onSearchChange }) => {
 
   const loadOptions = async (inputValue) => {
     return fetch(`${Geo_API_URL}?namePrefix=${inputValue}`, GeoAPIOptions)
-    .then(response => response.json())
-      .then(response => {
+      .then((response) => response.json())
+      .then((response) => {
         return {
           options: response.data.map((city) => {
             return {

@@ -48,9 +48,7 @@ function App() {
   //}}
 
   return (
-    <div
-      className="body"
-    >
+    <div className="body">
       <div className="weather-display">
         {currentWeather && <CurrentWeather data={currentWeather} />}
       </div>
@@ -58,7 +56,11 @@ function App() {
         <div className="searchbar">
           <Search onSearchChange={handleOnSearchChange} />
         </div>
+        {currentWeather && (
+          <hr className="rounded" id="search-detail-divider" />
+        )}
         {currentWeather && <CurrentWeatherDetails data={currentWeather} />}
+        {forecast && <hr className="rounded" id="detail-forecast-divider" />}
         <div className="forecast-weather">
           {forecast && <Forecast data={forecast} />}
         </div>
