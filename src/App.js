@@ -47,17 +47,22 @@ function App() {
   //  position: "absolute",
   //}}
 
-  const backimg = (currentWeather) ? `${currentWeather.weather[0].icon}.jpg` : 'unknown.jpg'
-  console.log(backimg)
+  const backimg = currentWeather
+    ? `${currentWeather.weather[0].icon}.jpg`
+    : "unknown.jpg";
+  console.log(backimg);
 
   return (
-    <div className="body" style={{ 
-      backgroundImage: `url(/backgrounds/${backimg})`, 
-      backgroundRepeat: 'no-repeat',
-      backgroundSize: 'cover',
-      position: 'center',
-      zIndex: '9999 !important',
-    }}>
+    <div
+      className="body"
+      style={{
+        backgroundImage: `url(/backgrounds/${backimg})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        position: "center",
+        zIndex: "9999 !important",
+      }}
+    >
       <div className="weather-display">
         {currentWeather && <CurrentWeather data={currentWeather} />}
       </div>

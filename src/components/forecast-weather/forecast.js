@@ -32,7 +32,7 @@ const Forecast = ({ data }) => {
             </p>
             <label className="day">{forecastDays[idx]}</label>
           </div>
-          <hr className="rounded" id={idx}/>
+          <hr className="rounded" id={idx} />
         </div>
       ))}
     </>
