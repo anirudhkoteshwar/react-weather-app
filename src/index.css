@@ -3,8 +3,8 @@ body {
   font-family: 'Roboto', Arial !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: blue;
   overflow: hidden;
+  background: url(../public/backgrounds/01d.jpg) no-repeat center center/cover;
 }
 
 code {

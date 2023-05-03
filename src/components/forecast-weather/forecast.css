@@ -1,8 +1,26 @@
 .daily-item {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    color: #ffffff;
 }
 
 .icon-small {
     width: 80px;
+    padding-left: 10px;
+}
+
+.min-max {
+    font-size: 26px;
+    font-weight: 600;
+    width: auto;
+}
+
+.day {
+    font-size: 22px;
+    font-weight: 400;
+    text-align: center;
+    padding: 5% 0;
+    padding-right: 10px;
+
 }

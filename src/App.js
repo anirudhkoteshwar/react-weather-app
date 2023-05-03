@@ -37,10 +37,20 @@ function App() {
 
   console.log(currentWeather);
   console.log(forecast);
-  //document.body.style.backgroundImage=`url(../public/backgrounds/${currentWeather.weather[0].icon}.png)`;
+  //const elem = document.querySelector(".body");
+  //elem.style.backgroundImage = `url(../public/backgrounds/${currentWeather.weather[0].icon}.jpg)`;
+  //      style={{
+  //  background: `url(./backgrounds/${currentWeather.weather[0].icon}.jpg) no-repeat center center/cover` ,
+  //  backgroundRepeat: "no-repeat",
+  //  width: '100%',
+
+  //  position: "absolute",
+  //}}
 
   return (
-    <div className="body">
+    <div
+      className="body"
+    >
       <div className="weather-display">
         {currentWeather && <CurrentWeather data={currentWeather} />}
       </div>
@@ -48,7 +58,7 @@ function App() {
         <div className="searchbar">
           <Search onSearchChange={handleOnSearchChange} />
         </div>
-          {currentWeather && <CurrentWeatherDetails data={currentWeather} />}
+        {currentWeather && <CurrentWeatherDetails data={currentWeather} />}
         <div className="forecast-weather">
           {forecast && <Forecast data={forecast} />}
         </div>
