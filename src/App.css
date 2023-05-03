@@ -16,7 +16,7 @@
   flex-direction: column;
   font-weight: 600;
   background: rgba(0, 0, 0, 0.45);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  box-shadow: 0 8px 32px 0 rgba(13, 16, 56, 0.37);
   backdrop-filter: blur(11px);
   -webkit-backdrop-filter: blur(11px);
   border: 1px solid rgba(255, 255, 255, 0.18);
@@ -45,4 +45,20 @@
 #search-detail-divider {
   margin: 0.5em auto;
   margin-top: 1em;
+}
+
+.searchbar > div > div {
+  background-color: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  color: #ffffff;
+  border-radius: 30px;
+  padding-left: 10px;
+  border-color: #ffffff;
+}
+
+.searchbar > div > div > div > div {
+  background-color: rgba(0, 0, 0, 0);
+  color: #ffffff;
+  
 }

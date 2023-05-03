@@ -34,3 +34,7 @@ hr.rounded {
   margin: auto auto;
   color: #ffffff34;
 }
+
+hr#\33.rounded {
+  display: none;
+}

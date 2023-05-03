@@ -32,6 +32,7 @@ const Search = ({ onSearchChange }) => {
       value={search}
       onChange={handleOnChange}
       loadOptions={loadOptions}
+      styles={{backgroundColor: '#00000'}}
     />
   );
 };
