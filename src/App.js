@@ -37,15 +37,6 @@ function App() {
 
   console.log(currentWeather);
   console.log(forecast);
-  //const elem = document.querySelector(".body");
-  //elem.style.backgroundImage = `url(../public/backgrounds/${currentWeather.weather[0].icon}.jpg)`;
-  //      style={{
-  //  background: `url(./backgrounds/${currentWeather.weather[0].icon}.jpg) no-repeat center center/cover` ,
-  //  backgroundRepeat: "no-repeat",
-  //  width: '100%',
-
-  //  position: "absolute",
-  //}}
 
   const backimg = currentWeather
     ? `${currentWeather.weather[0].icon}.jpg`
